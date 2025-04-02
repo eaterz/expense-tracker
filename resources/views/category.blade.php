@@ -45,7 +45,7 @@
                                 <li class="bg-gray-50 p-3 rounded flex justify-between items-center">
                                     <div>
                                         <p class="text-gray-800">{{ $expense->notes }}</p>
-                                        <p class="text-xs text-gray-500">{{ \Carbon\Carbon::parse($expense->date)->format('M d, Y') }}</p>
+                                        <p class="text-xs text-gray-500">{{ \Carbon\Carbon::parse($expense->spent_at)->format('M d, Y H:i:s') }}</p>
                                     </div>
                                     <span class="font-medium text-gray-700">${{ number_format($expense->amount, 2) }}</span>
                                 </li>

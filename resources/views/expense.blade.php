@@ -36,7 +36,7 @@
                 @foreach($expenses as $expense)
                     <tr>
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                            {{ \Carbon\Carbon::parse($expense->date)->format('M d, Y') }}
+                            {{ \Carbon\Carbon::parse($expense->spent_at)->format('M d, Y H:i:s') }}
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap">
                             <div class="flex items-center">

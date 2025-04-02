@@ -35,7 +35,7 @@ class ExpenseController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'date' => 'required|date',
+            'spent_at' => 'required|date',
             'amount' => 'required|numeric|min:0',
             'category_id' => 'required|exists:categories,id',
             'notes' => 'nullable|string|max:255',
@@ -71,7 +71,7 @@ class ExpenseController extends Controller
     public function update(Request $request, Expense $expense)
     {
         $validated = $request->validate([
-            'date' => 'required|date',
+            'spent_at' => 'required|date',
             'amount' => 'required|numeric|min:0',
             'category_id' => 'required|exists:categories,id',
             'notes' => 'nullable|string|max:255',
