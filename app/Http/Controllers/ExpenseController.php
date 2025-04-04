@@ -75,6 +75,7 @@ class ExpenseController extends Controller
             'amount' => 'required|numeric|min:0',
             'category_id' => 'required|exists:categories,id',
             'notes' => 'nullable|string|max:255',
+            'goal_id' => 'required|exists:goals,id',
         ]);
 
         $expense->update($validated);
